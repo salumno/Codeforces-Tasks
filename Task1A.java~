@@ -1,0 +1,20 @@
+import java.util.Scanner;
+public class Task1A {
+
+	public static long counter (int x, int y) {
+		int count = y / x;
+		if (y % x > 0) {
+			count = count + 1;
+		}
+		return count;
+	}	
+	
+	public static void main (String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		int m = sc.nextInt();
+		int a = sc.nextInt();
+		long result = counter(a,m) * counter(a,n);
+		System.out.println(result);
+	}
+}
